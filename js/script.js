@@ -17,58 +17,47 @@ function totalPrice(){
     return totalCost;
 }
 
-
-
 // event linstener for Memory
 
-document.getElementById('free-memory').addEventListener('click',function(){
-    memoryCost.innerText = '0';
-    totalPrice();
-    total.innerText = totalPrice();
-})
+function memoryTest(id, price){
+    document.getElementById(id).addEventListener('click',function(){
+        memoryCost.innerText = price;
+        totalPrice();
+        total.innerText = totalPrice();
+    })
+}
 
-document.getElementById('cost-memory').addEventListener('click',function(){
-    memoryCost.innerText = '180';
-    totalPrice();
-    total.innerText = totalPrice();
-})
+memoryTest('free-memory','0');
+memoryTest('cost-memory','180');
 
 
 // event linstener for Storage
 
-document.getElementById('ssd-256gb').addEventListener('click',function(){
-    storageCost.innerText = '0'
-    totalPrice();
-    total.innerText = totalPrice();
-})
+function storageTest(id, price){
+    document.getElementById(id).addEventListener('click',function(){
+        storageCost.innerText = price;
+        totalPrice();
+        total.innerText = totalPrice();
+    })
+}
 
-document.getElementById('ssd-512gb').addEventListener('click',function(){
-    storageCost.innerText = '100'
-    totalPrice();
-    total.innerText = totalPrice();
-})
-
-document.getElementById('ssd-1tb').addEventListener('click',function(){
-    storageCost.innerText = '180'
-    totalPrice();
-    total.innerText = totalPrice();
-})
+storageTest('ssd-256gb', '0');
+storageTest('ssd-512gb', '100');
+storageTest('ssd-1tb', '180');
 
 
 // event linstener for delivery option
 
-document.getElementById('free-delivery').addEventListener('click',function(){
-    deliveryCharge.innerText = '0';
-    totalPrice();
-    total.innerText = totalPrice();
-})
+function deliveryTest(id, price){
+    document.getElementById(id).addEventListener('click',function(){
+        deliveryCharge.innerText = price;
+        totalPrice();
+        total.innerText = totalPrice();
+    })
+}
 
-document.getElementById('cost-delivery').addEventListener('click',function(){
-    deliveryCharge.innerText = '20';
-    totalPrice();
-    total.innerText = totalPrice();
-})
-
+deliveryTest('free-delivery', '0');
+deliveryTest('cost-delivery', '20');
 
 // total calculation with pomo code
 

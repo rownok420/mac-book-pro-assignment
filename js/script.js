@@ -74,9 +74,9 @@ document.getElementById('cost-delivery').addEventListener('click',function(){
 
 function pomoCode(){
     const pomoValue = pomoInput.value;
-    // console.log(pomoValue)
     if(pomoValue == 'stevekaku'){
-        total.innerText = (parseInt(total.innerText) * 20) / 100;
+        const pomoCalculation = (parseInt(total.innerText) * 20) / 100;
+        total.innerText = parseInt(total.innerText) - pomoCalculation;
         pomoInput.value = '';
     }else{
         alert('Please Enter Correct Pomo Code')

@@ -64,8 +64,8 @@ deliveryTest('cost-delivery', '20');
 function pomoCode(){
     const pomoValue = pomoInput.value;
     if(pomoValue == 'stevekaku'){
-        const pomoCalculation = (parseInt(total.innerText) * 20) / 100;
-        total.innerText = parseInt(total.innerText) - pomoCalculation;
+        const pomoCalculation = (parseInt(allCost.innerText) * 20) / 100;
+        total.innerText = parseInt(allCost.innerText) - pomoCalculation;
         pomoInput.value = '';
     }else{
         alert('Please Enter Correct Pomo Code');

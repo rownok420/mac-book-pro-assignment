@@ -68,7 +68,7 @@ function pomoCode(){
         total.innerText = parseInt(total.innerText) - pomoCalculation;
         pomoInput.value = '';
     }else{
-        alert('Please Enter Correct Pomo Code')
+        alert('Please Enter Correct Pomo Code');
     }
    
 }

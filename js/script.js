@@ -77,6 +77,9 @@ function pomoCode(){
     // console.log(pomoValue)
     if(pomoValue == 'stevekaku'){
         total.innerText = (parseInt(total.innerText) * 20) / 100;
+        pomoInput.value = '';
+    }else{
+        alert('Please Enter Correct Pomo Code')
     }
    
 }
